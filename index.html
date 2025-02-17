@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    <header></header>
+    <header class="cabecalho">
+        <nav class="cabecalho__navegacao">
+            <a href="./index.html" class="cabecalho__nagecao__link">Home</a>
+            <a href="./about.html" class="cabecalho__nagecao__link">Sobre mim</a>
+            <a href="./curriculo.html" class="cabecalho__nagecao__link">Currículo</a>
+        </nav>
+    </header>
     <main class="conteudo_principal">
         <section class="conteudo_principal__sobre_mim">
             <h1 class="conteudo_principal__sobre_mim__titulo-principal">
@@ -21,15 +27,24 @@
                 Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?
             </p>
             <div class="conteudo_principal__sobre_mim__redes-sociais">
-                <a href="https://www.linkedin.com/in/thales-liscano-8a4617220/" class="conteudo_principal__sobre_mim__redes-sociais--linkedin">LinkedIn</a>
-                <a href="https://github.com/thalesliscano" class="conteudo_principal__sobre_mim__redes-sociais--github">GitHub</a>
+                <h2 class="conteudo_principal__sobre_mim__redes-sociais__subtitulo">Acesse minhas redes:</h2>
+                <a href="https://github.com/thalesliscano" class="conteudo_principal__sobre_mim__redes-sociais--github">
+                    <img class="conteudo_principal__sobre_mim__redes-sociais__logo" src="./assets/github.png" alt="logo-github">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/thales-liscano-8a4617220/" class="conteudo_principal__sobre_mim__redes-sociais--linkedin">
+                    <img class="conteudo_principal__sobre_mim__redes-sociais__logo" src="./assets/linkedin.png" alt="logo-linkedin">
+                    LinkedIn
+                </a>
             </div>
         </section>
         <div class="conteudo_principal__imagem">
-            <img src="./img/photo.jpeg" alt="Imagem de Thales Liscano">
+            <img src="./assets/photo.jpeg" alt="Imagem de Thales Liscano">
         </div>
     </main>
-    <footer></footer>
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por Thales Liscano Carvalho</p>
+    </footer>
 </body>
 
 </html>

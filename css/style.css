@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --primary-color: #123524;
+    --secondary-color: #85A947;
+    --tertiary-color: #EFE3C2;
+
+    --text-color: #85A947;
+
+    --hover-color-btn-nav: #007bff;
+    --hover-color-btn-link: #3E7B27;
+
+    --font-primary: "Krona One", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -8,25 +21,37 @@
 }
 
 body {
-    height:100vh;
-    background-color: #000000;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 p {
-    color: darkgray;
+    color: var(--text-color);
 }
 
 a {
-    background-color: #22D4FD;
-    border: none;
-    color: #000000;
     text-decoration: none;
-    font-weight: 600;
 }
 
 strong {
-    color: #22D4FD;
+    color: var(--tertiary-color);
+}
+
+.cabecalho{
+    display: flex;
+    padding: 2% 0 0 19.5%;
+    align-items: center;
+    gap: 80px;
+}
+.cabecalho__nagecao__link{
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    color: var(--tertiary-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+.cabecalho__nagecao__link:hover {
+    color: var(--hover-color-button);
 }
 
 .conteudo_principal {
@@ -35,7 +60,7 @@ strong {
     height: 100%;
     gap: 30px;
     align-items: center;
-    margin: 0 auto;
+    margin: 5% auto;
 }
 
 .conteudo_principal__sobre_mim {
@@ -46,9 +71,14 @@ strong {
 }
 
 .conteudo_principal__sobre_mim__titulo-principal {
-    font-family: "Montserrat", serif;
+    font-family: var(--font-primary);
     font-size: 30px;
-    font-family: "Krona One", serif;
+}
+.conteudo_principal__sobre_mim__titulo-principal.color__outras-paginas{
+    color: var(--tertiary-color);
+}
+.conteudo_principal__sobre_mim__texto-descricao.subtitulo{
+    color: var(--tertiary-color);
 }
 
 .conteudo_principal__sobre_mim__texto-descricao {
@@ -57,21 +87,45 @@ strong {
 
 .conteudo_principal__sobre_mim__redes-sociais {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
 }
 
+.conteudo_principal__sobre_mim__redes-sociais__subtitulo{
+    font-family: var(--font-primary);
+    color: var(--tertiary-color);
+    font-weight: 400;
+    font-size: 24px;
+}
 .conteudo_principal__sobre_mim__redes-sociais--linkedin,
 .conteudo_principal__sobre_mim__redes-sociais--github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    text-decoration: none;
+    font-weight: 600;
     padding: 10px;
-    border-radius: 10px;
-    width: 190px;
+    border-radius: 4px;
+    width: 250px;
     text-align: center;
+}
+.conteudo_principal__sobre_mim__redes-sociais--linkedin:hover,
+.conteudo_principal__sobre_mim__redes-sociais--github:hover{
+    background-color: var(--hover-color-btn-link);
+    color: var(--tertiary-color);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .conteudo_principal__imagem {
     width: 300px;
     height: 400px;
-    border: 2px solid #22D4FD;
+    border: 2px solid var(--tertiary-color);
     border-radius: 10px;
     margin-top: 20px;
 }
@@ -83,4 +137,14 @@ strong {
     left: -10px;
     top: 10px;
     border-radius: 10px;
+}
+
+.rodape__texto{
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    padding: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
 }
