@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url(./about.css);
 :root{
     --primary-color: #123524;
     --secondary-color: #85A947;
@@ -39,15 +39,17 @@ strong {
 
 .cabecalho{
     display: flex;
-    padding: 2% 0 0 19.5%;
+    padding: 2% 0 0 0;
     align-items: center;
+    width: 75%;
     gap: 80px;
+    margin: 0 auto;
 }
 .cabecalho__nagecao__link{
     font-family: var(--font-secondary);
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--tertiary-color);
-    margin: 0 10px;
+    margin: 0 10px 0 0px;
     text-decoration: none;
 }
 .cabecalho__nagecao__link:hover {
@@ -56,15 +58,16 @@ strong {
 
 .conteudo_principal {
     display: flex;
-    width: 800px;
+    width: 75%;
     height: 100%;
     gap: 30px;
     align-items: center;
     margin: 5% auto;
+    justify-items: center;
 }
 
 .conteudo_principal__sobre_mim {
-    width: 400px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -72,7 +75,7 @@ strong {
 
 .conteudo_principal__sobre_mim__titulo-principal {
     font-family: var(--font-primary);
-    font-size: 30px;
+    font-size: 2.25rem;
 }
 .conteudo_principal__sobre_mim__titulo-principal.color__outras-paginas{
     color: var(--tertiary-color);
@@ -82,7 +85,7 @@ strong {
 }
 
 .conteudo_principal__sobre_mim__texto-descricao {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .conteudo_principal__sobre_mim__redes-sociais {
@@ -97,7 +100,7 @@ strong {
     font-family: var(--font-primary);
     color: var(--tertiary-color);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .conteudo_principal__sobre_mim__redes-sociais--linkedin,
 .conteudo_principal__sobre_mim__redes-sociais--github {
@@ -111,7 +114,7 @@ strong {
     font-weight: 600;
     padding: 10px;
     border-radius: 4px;
-    width: 250px;
+    width: 70%;
     text-align: center;
 }
 .conteudo_principal__sobre_mim__redes-sociais--linkedin:hover,
@@ -122,21 +125,25 @@ strong {
     cursor: pointer;
 }
 
+.conteudo_principal__imagem_container {
+    width: 35%;
+    position: relative;
+    margin: 0 auto;
+}
 .conteudo_principal__imagem {
-    width: 300px;
-    height: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.conteudo_principal__imagem_container::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
     border: 2px solid var(--tertiary-color);
     border-radius: 10px;
-    margin-top: 20px;
-}
-
-.conteudo_principal__imagem img {
-    max-width: 100%;
-    height: 400px;
-    position: relative;
-    left: -10px;
-    top: 10px;
-    border-radius: 10px;
+    z-index: -1;
 }
 
 .rodape__texto{
@@ -145,6 +152,24 @@ strong {
     background-color: var(--tertiary-color);
     padding: 24px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 6%;
+        justify-content: center;
+        width:75%;
+    }
+    .conteudo_principal{
+        flex-direction: column-reverse;
+        width: 50%;
+    }
+    .conteudo_principal__sobre_mim{
+        width: 100%;
+    }
+    .conteudo_principal__imagem_container{
+        width: 50%;
+    }
 }
